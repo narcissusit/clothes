@@ -1,0 +1,455 @@
+@font-face {
+  font-family: 'Georgia'; }
+
+.sprite, .menu_chain .clothes_type:before, .product_characteristic_item input[type="radio"]:checked + label .check_image:before {
+  content: '';
+  display: block;
+  background-image: url("../images/sprite.png"); }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  min-width: 320px; }
+
+header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 2px 9px 0px rgba(189, 189, 189, 0.5);
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.logo {
+  display: block; }
+  .logo:before {
+    content: '';
+    background-image: url("../images/logo.png");
+    width: 21px;
+    height: 31px;
+    display: block; }
+
+.header_row {
+  width: 80%; }
+
+.main_menu {
+  margin-top: 10px; }
+  .main_menu .main_menu_list {
+    list-style: none;
+    display: flex; }
+    .main_menu .main_menu_list li a {
+      padding: 10px;
+      font-family: "PT Sans Narrow", sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #9297a3; }
+      .main_menu .main_menu_list li a:hover {
+        color: #333743; }
+    .main_menu .main_menu_list li .active_page {
+      color: #333743; }
+
+.user_links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  .user_links a {
+    display: block;
+    text-decoration: none;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #9297a3;
+    padding: 10px; }
+  .user_links .bag, .user_links .login {
+    color: #333743; }
+  .user_links .bag {
+    display: flex;
+    align-items: center; }
+
+.bag {
+  margin: 0 15px; }
+  .bag:after {
+    content: '3';
+    display: block;
+    color: #fff;
+    background-color: #333743;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    margin-left: 5px;
+    font-family: "Georgia", sans-serif;
+    font-size: 11px; }
+
+.register {
+  display: flex;
+  align-items: baseline; }
+
+.sign_up:hover {
+  color: #333743; }
+
+.separator:after {
+  content: '';
+  background-color: #000;
+  height: 11px;
+  width: 1px;
+  display: block; }
+
+main {
+  padding-top: 85px;
+  padding-bottom: 22px; }
+
+.product_card {
+  margin-top: 52px;
+  margin-bottom: 117px; }
+
+.product_view {
+  display: flex;
+  flex-wrap: wrap; }
+
+.product_small_view_block {
+  width: 100%;
+  order: 2;
+  display: flex;
+  justify-content: center; }
+
+.image_block, .product_small_view, .product_big_view, .possible_product_image {
+  position: relative;
+  overflow: hidden;
+  height: 0; }
+
+.image, .product_small_view img, .product_big_view img, .possible_product_image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+.product_small_view {
+  padding-top: 40%;
+  width: calc(33.33333% - 20px);
+  margin: 10px; }
+  .product_small_view img {
+    max-width: 100%;
+    height: auto; }
+
+.product_big_view {
+  padding-top: 100%;
+  width: calc(100% - 20px);
+  margin: 10px; }
+  .product_big_view img {
+    max-width: 100%;
+    height: auto; }
+
+.product_description_block {
+  padding: 14px 10px 0; }
+
+.menu_chain {
+  display: flex;
+  justify-content: center; }
+  .menu_chain a, .menu_chain .next_separator {
+    font-family: "Georgia", sans-serif;
+    font-size: 12px;
+    color: #9fcede; }
+  .menu_chain a {
+    text-decoration: none; }
+    .menu_chain a:hover {
+      text-decoration: overline; }
+  .menu_chain .next_separator {
+    margin: 0 3px; }
+    .menu_chain .next_separator:after {
+      content: ' >'; }
+  .menu_chain .clothes_type {
+    display: flex; }
+    .menu_chain .clothes_type:before {
+      width: 12px;
+      height: 12px;
+      margin-right: 7px; }
+
+.product_title {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  max-width: 285px;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #303032; }
+
+.product_price {
+  text-align: center;
+  font-family: "Georgia", sans-serif;
+  font-size: 22px;
+  color: #303032;
+  display: block;
+  margin: auto; }
+
+.product_description {
+  margin: 20px; }
+
+.product_description_title, .product_characteristic_title {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #333743; }
+  .product_description_title:after, .product_characteristic_title:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: #dbdee5; }
+
+.product_description_title {
+  text-align: center; }
+  .product_description_title:after {
+    margin-top: 5px;
+    margin-bottom: 18px; }
+
+.product_description_info p {
+  text-align: center;
+  font-family: "Georgia", sans-serif;
+  font-size: 12px;
+  color: #9297a3; }
+
+.product_characteristic {
+  width: 167px;
+  margin: auto; }
+
+.product_characteristic_title {
+  margin-left: 23px; }
+  .product_characteristic_title:after {
+    margin-left: -4px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+
+.product_characteristic_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px; }
+  .product_characteristic_item .check_image {
+    width: 12px;
+    height: 12px;
+    display: block;
+    border: 1px solid #000;
+    border-radius: 50%; }
+  .product_characteristic_item input[type="radio"] {
+    display: none; }
+    .product_characteristic_item input[type="radio"]:checked + label .check_image {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      background-color: #000;
+      border: none;
+      width: 11px;
+      height: 11px;
+      margin: 0 0.5px; }
+      .product_characteristic_item input[type="radio"]:checked + label .check_image:before {
+        background-position: -22px 0;
+        width: 7px;
+        height: 6px;
+        display: block;
+        padding-right: 2px;
+        padding-bottom: 2px;
+        border-radius: 50%; }
+  .product_characteristic_item .type_color {
+    display: flex;
+    align-items: baseline; }
+    .product_characteristic_item .type_color:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      display: block;
+      margin: 0 8px; }
+
+label:hover {
+  cursor: pointer; }
+
+.product_characteristic_name {
+  font-family: "Georgia", sans-serif;
+  font-size: 13px;
+  color: #9297a3;
+  display: flex;
+  align-items: baseline; }
+
+.blue:before {
+  background-color: #9fcede; }
+
+.brown:before {
+  background-color: #333743; }
+
+.buy_product {
+  background-color: #afa394;
+  border: none;
+  outline: none;
+  width: calc(100% - 40px);
+  max-width: 489px;
+  margin: 20px auto;
+  height: 49px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  font-family: "Georgia", sans-serif;
+  font-size: 13px;
+  transition: all .5s ease-in-out; }
+  .buy_product:hover {
+    cursor: pointer;
+    background-color: #b27a7a; }
+
+.possible_products {
+  padding: 0 7px; }
+
+.possible_products_title {
+  text-align: center; }
+  .possible_products_title p {
+    font-family: "Georgia", sans-serif;
+    font-size: 11px;
+    color: #9297a3; }
+  .possible_products_title h3 {
+    text-transform: uppercase;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #333743;
+    margin-top: 6px;
+    margin-bottom: 18px; }
+
+.possible_product_image {
+  padding-top: 100%;
+  background-color: #f5f5f5; }
+  .possible_product_image img {
+    max-width: 100%; }
+
+.possible_product_info {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 7px; }
+
+.possible_product_title h4 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #333743;
+  text-transform: uppercase; }
+
+.possible_product_title p {
+  font-family: "Georgia", sans-serif;
+  font-size: 11px;
+  color: #9297a3; }
+
+.possible_product_price {
+  font-family: "Georgia", sans-serif;
+  font-size: 13px;
+  color: #9297a3; }
+
+.owl-carousel .owl-item img {
+  width: auto; }
+
+@media (min-width: 480px) {
+  .product_view {
+    display: flex; }
+  .product_small_view_block .product_small_view {
+    width: 100%;
+    max-width: 108px;
+    padding-top: 25%; }
+  .product_big_view {
+    padding-top: 90%; } }
+
+@media (min-width: 512px) {
+  header {
+    padding: 0; }
+  .header_row {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between; }
+  .logo {
+    margin: 20px 20px 19px; }
+  .user_links .bag {
+    margin-top: 5px; }
+  .register {
+    border-left: 1px solid #dedede;
+    padding: 18px 0 15px 0; }
+  main {
+    padding-top: 70px; }
+  .possible_products_list {
+    display: flex;
+    justify-content: space-between; }
+    .possible_products_list .possible_product_block {
+      margin: 0 10px; } }
+
+@media (min-width: 620px) {
+  .product_small_view_block .product_small_view {
+    padding-top: 18%; }
+  .product_big_view {
+    padding-top: 80%; } }
+
+@media (min-width: 800px) {
+  .logo {
+    margin-left: 39px;
+    margin-right: 41px; }
+  .main_menu .main_menu_list {
+    align-items: flex-start; }
+    .main_menu .main_menu_list li {
+      padding-left: 18px;
+      padding-right: 18px; }
+  .user_links .bag {
+    margin-right: 17px; }
+    .user_links .bag:after {
+      margin-left: 13px; }
+  .register {
+    padding-left: 19px;
+    padding-right: 19px; }
+    .register a {
+      margin-left: 7px;
+      margin-right: 7px; }
+  .wrap {
+    max-width: 1220px;
+    margin: auto; }
+  .product_card {
+    display: flex; }
+  .product_view, .product_description_block {
+    width: 50%; }
+  .product_small_view_block .product_small_view {
+    padding-top: 30%; }
+  .product_big_view {
+    padding-top: 120%; }
+  .product_title {
+    padding-bottom: 51px; }
+  .product_description {
+    margin-top: 60px;
+    margin-bottom: 72px; }
+    .product_description p {
+      max-width: 450px;
+      margin: auto; }
+  .product_characteristic {
+    margin: 0; }
+  .buy_product {
+    margin-top: 95px; } }
+
+@media (min-width: 960px) {
+  .product_view {
+    flex-wrap: nowrap; }
+  .product_small_view_block {
+    order: 0;
+    display: block;
+    width: 30%;
+    margin: 0; }
+    .product_small_view_block .product_small_view {
+      padding-top: 104%;
+      margin: 0 0 10px 0; }
+      .product_small_view_block .product_small_view img {
+        margin: 0 auto; }
+  .product_big_view {
+    padding-top: 105%;
+    margin: 0;
+    margin-left: -80px; } }
